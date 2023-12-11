@@ -1,0 +1,34 @@
+.main{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    gap: 5%;
+    margin-top: 2%;
+    cursor: pointer;
+    
+    .circle{
+        width: 13.5%;
+        height: 100%;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20%;
+        .shortName{
+            font-family: Roboto;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: rgba(255,255,255,1);
+        }
+    }
+
+    .groupName{
+        font-family: Roboto;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: rgba(0,0,0,1);
+        margin-top: 3%;
+    }
+}

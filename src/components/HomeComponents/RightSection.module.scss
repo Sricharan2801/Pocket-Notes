@@ -1,0 +1,56 @@
+.main{
+    width: 70%;
+    height: 100%;
+    background-color:rgba(218, 229, 245, 1);
+
+   .detailsContainer{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    
+    .image{
+        width: 40%;
+        height: 40%;
+    }
+
+    .title{
+        color: black;
+        font-family: Roboto;
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    .description{
+        width: 54%;
+        color: rgba(41, 41, 41, 1);
+        font-family: Roboto;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-left: 2%;
+    }
+   }
+
+   .securityMessageContainer{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1%;
+
+    .lockImage{
+      width: 12px;
+    }
+
+    .securityMessage{
+        color: rgba(41, 41, 41, 1);
+        font-family: Roboto;
+        font-weight: 1rem;
+        font-weight: 400;
+    }
+   }
+}

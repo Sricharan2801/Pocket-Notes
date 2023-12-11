@@ -1,0 +1,51 @@
+.main {
+    width: 30%;
+    height: 100%;
+    // background-color: antiquewhite;
+
+    .heading {
+        width: 100%;
+        height: 10%;
+        color: rgba(0, 0, 0, 1);
+        font-family: Roboto;
+        font-size: 1.5rem;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .groupsContainer {
+        width: 100%;
+        height: 90%;
+
+        .groups {
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+        }
+    }
+
+    .addButton {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        background-color: rgba(22, 0, 139, 1);
+        position: fixed;
+        top: 85%;
+        left: 23%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+       
+
+        .symbol {
+            color: rgba(255, 255, 255, 1);
+            font-family: Roboto;
+            font-size: 2rem;
+            font-weight: 500;
+           
+        }
+    }
+}

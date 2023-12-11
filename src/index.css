@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@500&family=DM+Sans:opsz@9..40&family=Inter:wght@300&family=Lato:wght@100&family=Roboto:wght@400;500&family=Russo+One&family=Single+Day&family=Ubuntu:wght@500&display=swap');
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button{
+    border: none;
+    outline: none;
+}
+button:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,121 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47, 47, 47, 0.75);
+    z-index: 0; 
+  }
+  
+
+  .modal {
+    width: 35%;
+    height: 35%;
+    position: absolute;
+    top: 32.5%;
+    left: 25%;
+    border-style: none;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 1; 
+    
+   
+    .heading{
+        width: 100%;
+        height: 10%;
+        color: rgba(0, 0, 0, 1);
+        font-family: Roboto;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-top: 2%;
+        margin-left: 5%;
+    }
+
+    .groupName{
+        width: 95%;
+        height: 20%;
+        display: flex;
+        gap: 5%;
+        margin-top: 3%;
+        margin-left: 5%;
+        .text{
+            font-family: Roboto;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-top: 2%;
+        }
+
+        .inputArea{
+            width: 60%;
+            height: 80%;
+            margin-top:1%;
+            border:2px solid rgba(204, 204, 204, 1);
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 1);
+            padding-left: 5%;
+        }
+    }
+
+    .chooseColor{
+        width: 95%;
+        height: 30%;
+        display: flex;
+        gap: 4%;
+        margin-top: 3%;
+        margin-left: 5%;
+
+        .text{
+            
+            font-family: Roboto;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-top: 2%;
+        }
+
+        .colors{
+         width: 50%;
+         height: 80%;
+         display: flex;
+         justify-content: space-around;
+        
+         .color{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+         }
+
+         #purpleColor{
+            background-color: rgba(179, 139, 250, 1);
+         }
+         #pinkColor{
+            background-color: rgba(255, 121, 242, 1);
+         }
+         #lightGreenColor{
+            background-color: rgba(67, 230, 252, 1);
+         }
+         #orangeColor{
+            background-color: rgba(241, 149, 118, 1);
+         }
+         #blueColor{
+            background-color: rgba(0, 71, 255, 1);
+         }
+         #skyBlueColor{
+            background-color: rgba(102, 145, 255, 1);
+         }
+        }
+    }
+
+    .createButton{
+        width: 20%;
+        height: 15%;
+        background-color: rgba(0, 31, 139, 1);
+        color: rgba(255, 255, 255, 1);
+        border-radius: 11px;
+        font-family: Roboto;
+        font-weight: 400;
+        margin-top: 1%;
+        margin-left: 75%;
+    }
+  }
+  
+  
