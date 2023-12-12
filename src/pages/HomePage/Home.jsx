@@ -13,7 +13,7 @@ const Home = () => {
      
       <Routes>
         <Route path='/' element={ <RightSection />}></Route>
-        <Route path='/notes' element={<NotesWindow/>} />
+        <Route path='/notes' element={<NotesWindow/>}/>
       </Routes>
     </div>
   )

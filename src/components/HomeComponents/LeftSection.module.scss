@@ -1,14 +1,14 @@
 .main {
-    width: 30%;
+    width: 20%;
     height: 100%;
-    // background-color: antiquewhite;
+   
 
     .heading {
         width: 100%;
         height: 10%;
         color: rgba(0, 0, 0, 1);
         font-family: Roboto;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: 500;
         display: flex;
         justify-content: center;
@@ -18,7 +18,7 @@
     .groupsContainer {
         width: 100%;
         height: 90%;
-
+       
         .groups {
             width: 100%;
             height: 100%;
@@ -33,7 +33,7 @@
         background-color: rgba(22, 0, 139, 1);
         position: fixed;
         top: 85%;
-        left: 23%;
+        left: 13%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -49,3 +49,14 @@
         }
     }
 }
+
+.groups::-webkit-scrollbar{
+    width: 10px;
+    background-color: rgba(217, 217, 217, 1);
+}
+
+.groups::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+}
+

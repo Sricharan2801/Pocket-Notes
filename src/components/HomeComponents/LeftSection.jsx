@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import styles from './LeftSection.module.scss';
 import CreateNewGroup from '../Modal/CreateNewGroup';
 import CreatedGroup from '../Groups/CreatedGroup';
+import { useNavigate } from 'react-router-dom';
+import { useAppContext } from '../AppContext';
+
+
 
 const LeftSection = () => {
   const [modalVisibility, setModalVisibility] = useState(false);
@@ -13,6 +17,8 @@ const LeftSection = () => {
   );
   const [groupData, setGroupData] = useState([]);
 
+  const { setSelectedGroup } = useAppContext();
+  const navigate = useNavigate()
 
   useEffect(() => {
     const storedData = JSON.parse(localStorage.getItem('groupData')) || [];
@@ -40,7 +46,6 @@ const LeftSection = () => {
       }
 
       if (!duplicateName) {
-        // Update local storage and state
         const updatedData = [...groupData, { groupName, upperCaseName, color }];
         localStorage.setItem('groupData', JSON.stringify(updatedData));
         setGroupData(updatedData);
@@ -49,6 +54,13 @@ const LeftSection = () => {
         setGroupNameVisibility(true);
       }
     }
+  };
+ 
+
+  const handleGroupClick = (index) => {
+    const selectedGroup = groupData[index];
+    setSelectedGroup(selectedGroup);
+    navigate("/notes");
   };
 
   return (
@@ -63,9 +75,11 @@ const LeftSection = () => {
                 groupName={groupDetails.groupName}
                 upperCaseName={groupDetails.upperCaseName}
                 color={groupDetails.color}
+                onClick={() => handleGroupClick(index)}
               />
             ))}
         </div>
+
         <button className={styles.addButton} onClick={clickHandler}>
           <p className={styles.symbol}>+</p>
         </button>

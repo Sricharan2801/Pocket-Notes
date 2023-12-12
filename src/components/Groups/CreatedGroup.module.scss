@@ -5,10 +5,12 @@
     gap: 5%;
     margin-top: 2%;
     cursor: pointer;
+    display: flex;
+    align-items: center;
     
     .circle{
-        width: 13.5%;
-        height: 100%;
+        width: 17%;
+        height: 85%;
         border-radius: 50%;
         border: none;
         outline: none;
@@ -26,9 +28,13 @@
 
     .groupName{
         font-family: Roboto;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: 500;
         color: rgba(0,0,0,1);
-        margin-top: 3%;
+        
     }
+}
+
+.main:hover{
+  background-color: rgba(47, 47, 47, 0.17);
 }

@@ -1,21 +1,17 @@
 import React from 'react'
 import styles from "./CreatedGroup.module.scss"
-import { useNavigate } from 'react-router-dom'
 
-const CreatedGroup = ({groupName,upperCaseName,color}) => {
+
+const CreatedGroup = ({groupName,upperCaseName,color,onClick}) => {
 
   const circleColor = {
     backgroundColor: color
   }
 
-  const navigate = useNavigate()
+ 
 
-  const navigateToNotes = ()=>{
-    navigate("/notes");
-  }
   return (
-    <div className={styles.main} onClick={navigateToNotes}>
-      
+    <div className={styles.main} onClick={onClick}>
       <div className={styles.circle} style={circleColor}>
         <p className={styles.shortName}>{upperCaseName}</p>
       </div>
