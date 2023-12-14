@@ -7,13 +7,14 @@ import { v4 as uuidv4 } from 'uuid';
 import FormattedDate from "../../Utils/Date"
 import FormattedTime from "../../Utils/Time"
 import { useNavigate } from 'react-router-dom';
+import backArrow from "../../assets/backArrow.png"
 
 
 const NotesWindow = () => {
   const [text, setText] = useState("");
   const { selectedGroup } = useAppContext();
   const [notes, setNotes] = useState([]);
-
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
   const navigate = useNavigate()
 
   window.onload = ()=>{
@@ -64,10 +65,19 @@ const NotesWindow = () => {
     backgroundColor: selectedGroup ? selectedGroup.color : 'initial',
   }
 
+  const navigateToHome= ()=>{
+    navigate("/")
+  }
+
 
   return (
     <div className={styles.main}>
       <div className={styles.header}>
+
+        {
+          isMobile? <img src={backArrow} alt=""  className={styles.backArrow}
+          onClick={()=> navigateToHome()}/> : null
+        }
 
         <div className={styles.circle} style={circleColor}>
           <p className={styles.shortName}>{selectedGroup ? selectedGroup.upperCaseName : ""}</p>
@@ -75,9 +85,6 @@ const NotesWindow = () => {
 
         <p className={styles.groupName}>{selectedGroup ? selectedGroup.groupName : ""}</p>
       </div>
-
-
-
 
 
       <div className={styles.body}>
@@ -95,9 +102,6 @@ const NotesWindow = () => {
           ))}
         </div>
       </div>
-
-
-
 
 
       <div className={styles.footer}>
