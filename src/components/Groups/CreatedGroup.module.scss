@@ -38,3 +38,14 @@
 .main:hover{
   background-color: rgba(47, 47, 47, 0.17);
 }
+
+@media (max-width:600px){
+   .main{
+    margin-top: 3%;
+    .circle{
+        margin-left: 9%;
+        
+     }
+   }
+   
+}
