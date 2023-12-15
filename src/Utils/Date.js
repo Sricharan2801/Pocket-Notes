@@ -1,5 +1,3 @@
-
-
 const FormattedDate = () => {
     const date = new Date();
     const requirements = {

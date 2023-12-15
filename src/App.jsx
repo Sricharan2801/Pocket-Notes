@@ -1,12 +1,12 @@
 import './App.css'
 import Home from './pages/HomePage/Home'
 function App() {
- 
+
 
   return (
-   <div id='main'>
-    <Home/>
-   </div>
+    <div id='main'>
+      <Home />
+    </div>
   )
 }
 

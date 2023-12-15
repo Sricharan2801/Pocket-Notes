@@ -4,6 +4,7 @@ import styles from "./CreatedGroup.module.scss"
 
 const CreatedGroup = ({groupName,upperCaseName,color,onClick}) => {
 
+  // assigning color prop based on user Selection
   const circleColor = {
     backgroundColor: color
   }

@@ -1,4 +1,4 @@
-.main{
+.main {
     width: 100%;
     height: 10%;
     display: flex;
@@ -7,10 +7,10 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    
-    .circle{
-        width: 17%;
-        height: 85%;
+
+    .circle {
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         border: none;
         outline: none;
@@ -18,34 +18,35 @@
         justify-content: center;
         align-items: center;
         margin-left: 20%;
-        .shortName{
+
+        .shortName {
             font-family: Roboto;
             font-size: 1.3rem;
             font-weight: 500;
-            color: rgba(255,255,255,1);
+            color: rgba(255, 255, 255, 1);
         }
     }
 
-    .groupName{
+    .groupName {
         font-family: Roboto;
         font-size: 1.1rem;
         font-weight: 500;
-        color: rgba(0,0,0,1);
-        
+        color: rgba(0, 0, 0, 1);
     }
 }
 
-.main:hover{
-  background-color: rgba(47, 47, 47, 0.17);
+.main:hover {
+    background-color: rgba(47, 47, 47, 0.17);
 }
 
-@media (max-width:600px){
-   .main{
-    margin-top: 3%;
-    .circle{
-        margin-left: 9%;
-        
-     }
-   }
-   
+@media (max-width:600px) {
+    .main {
+        width: 100%;
+        height: 7%;
+        margin-top: 3%;
+
+        .circle {
+            margin-left: 9%;
+        }
+    }
 }

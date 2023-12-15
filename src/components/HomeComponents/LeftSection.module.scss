@@ -2,7 +2,6 @@
     width: 20%;
     height: 100%;
 
-
     .heading {
         width: 100%;
         height: 10%;
@@ -38,7 +37,6 @@
         justify-content: center;
         align-items: center;
 
-
         .symbol {
             color: rgba(255, 255, 255, 1);
             font-family: Roboto;
@@ -73,7 +71,15 @@
         .addButton {
             margin-left: 60%;
         }
-
     }
 
+    .groups::-webkit-scrollbar {
+        width: 5px;
+        background-color: rgba(217, 217, 217, 1);
+    }
+    
+    .groups::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 10px;
+    }
 }

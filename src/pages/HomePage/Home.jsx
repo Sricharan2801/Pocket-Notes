@@ -6,8 +6,10 @@ import RightSection from '../../components/HomeComponents/RightSection';
 import NotesWindow from '../../components/NotesWindow/NotesWindow';
 
 const Home = () => {
+  // isMobile State sets to true when width is below 600px
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
 
+  // useEffect to recognize the size changing...
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 600);
@@ -22,12 +24,14 @@ const Home = () => {
 
   return (
     <div className={styles.main}>
+      {/* For Mobile view... */}
       {isMobile ? (
         <Routes>
           <Route path='/' element={<LeftSection />} />
           <Route path='/notes' element={<NotesWindow />} />
         </Routes>
       ) : (
+        // For desktop view..
         <>
           <LeftSection />
           <Routes>

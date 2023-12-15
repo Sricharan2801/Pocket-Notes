@@ -11,16 +11,26 @@ import backArrow from "../../assets/backArrow.png"
 
 
 const NotesWindow = () => {
+  // text state for entered text.
   const [text, setText] = useState("");
+
+  // selectedGroup for identifying selected group
   const { selectedGroup } = useAppContext();
+
+  // notes for adding all entered notes
   const [notes, setNotes] = useState([]);
+
+  // is mobile for identifying mobile view
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
+
+  // navigate is used to route for required component..
   const navigate = useNavigate()
 
-  window.onload = ()=>{
+  window.onload = () => {
     navigate("/")
   }
 
+  // useEffect for getting the notes from local storage
   useEffect(() => {
     if (selectedGroup && selectedGroup.groupName) {
       const storedNotes = JSON.parse(localStorage.getItem(`notesOf ${selectedGroup.groupName}`)) || [];
@@ -29,19 +39,18 @@ const NotesWindow = () => {
   }, [selectedGroup]);
 
 
-
+  // useEffect for setting the notes into local storage 
   useEffect(() => {
     if (selectedGroup && selectedGroup.groupName) {
-      // Save notes to local storage whenever it changes
       localStorage.setItem(`notesOf ${selectedGroup.groupName}`, JSON.stringify(notes));
     }
   }, [notes, selectedGroup]);
 
-
+  // function executes when user clicks the send button
   const handleSend = () => {
     if (text.trim() !== "") {
       const newNote = {
-        id: uuidv4(), // Use uuid to generate a unique ID
+        id: uuidv4(), // generates a unique ID
         text,
         timeStamp: FormattedTime(),
         dateStamp: FormattedDate(),
@@ -55,28 +64,30 @@ const NotesWindow = () => {
     }
   };
 
-
+  // function for identifying change in the text area
   const changeHandler = (e) => {
     setText(e.target.value);
   };
 
-
+  // setting circle background based on selected group
   const circleColor = {
     backgroundColor: selectedGroup ? selectedGroup.color : 'initial',
   }
 
-  const navigateToHome= ()=>{
+  // works in mobile view
+  const navigateToHome = () => {
     navigate("/")
   }
 
 
   return (
     <div className={styles.main}>
+      {/* header (contains group details) */}
       <div className={styles.header}>
 
         {
-          isMobile? <img src={backArrow} alt=""  className={styles.backArrow}
-          onClick={()=> navigateToHome()}/> : null
+          isMobile ? <img src={backArrow} alt="" className={styles.backArrow}
+            onClick={() => navigateToHome()} /> : null
         }
 
         <div className={styles.circle} style={circleColor}>
@@ -86,24 +97,24 @@ const NotesWindow = () => {
         <p className={styles.groupName}>{selectedGroup ? selectedGroup.groupName : ""}</p>
       </div>
 
-
+      {/* body (contains all notes..) */}
       <div className={styles.body}>
         <div className={styles.notesContainer}>
           {notes.map((note) => (
             <div key={note.id} className={styles.note}>
               {note.text}
-              
+
               <div className={styles.dateAndTimeContainer}>
-              <p className={styles.dateAndTime}>{note.dateStamp}</p>
-              <p className={styles.seperator}></p>
-              <p className={styles.dateAndTime}>{note.timeStamp}</p>
+                <p className={styles.dateAndTime}>{note.dateStamp}</p>
+                <p className={styles.seperator}></p>
+                <p className={styles.dateAndTime}>{note.timeStamp}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-
+      {/* footer (text box) */}
       <div className={styles.footer}>
         <textarea
           className={styles.textBox}
